@@ -6,6 +6,7 @@ export function DLoader<T>(obj: Constructable<T>, options: CreateDataLoaderOptio
   return (object: any, propertyKey: string | symbol, index: number) => {
     const dataLoader = createDataLoader(obj, options);
     const propertyName = propertyKey ? propertyKey.toString() : '';
+
     Container.registerHandler({ object, propertyName, index, value: () => dataLoader });
   };
 }

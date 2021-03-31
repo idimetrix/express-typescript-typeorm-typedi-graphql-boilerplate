@@ -40,16 +40,16 @@
     "no-inferrable-types": [true, "ignore-params"],
     "no-switch-case-fall-through": true,
     "typedef": [
-      true,
-      "call-signature",
-      "arrow-call-signature",
-      "parameter",
-      "arrow-parameter",
-      "property-declaration",
-      "variable-declaration",
-      "member-variable-declaration",
-      "object-destructuring",
-      "array-destructuring"
+      true
+      //      "call-signature",
+      //      "arrow-call-signature",
+      //      "parameter",
+      //      "arrow-parameter",
+      //      "property-declaration",
+      //      "variable-declaration",
+      //      "member-variable-declaration",
+      //      "object-destructuring",
+      //      "array-destructuring"
     ],
     "trailing-comma": [
       true,

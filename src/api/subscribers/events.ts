@@ -10,4 +10,10 @@ export const events = {
   pet: {
     created: 'onPetCreate',
   },
+  threeCommasAccountTableData: {
+    created: 'onThreeCommasAccountTableDataCreate',
+  },
+  threeCommasDeal: {
+    created: 'onThreeCommasDealCreate',
+  },
 };

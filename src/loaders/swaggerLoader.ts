@@ -17,8 +17,6 @@ export const swaggerLoader: MicroframeworkLoader = (settings: MicroframeworkSett
       refPointerPrefix: '#/components/schemas/',
     });
 
-    console.log({ schemas });
-
     const swaggerFile = routingControllersToSpec(
       getMetadataArgsStorage(),
       {},

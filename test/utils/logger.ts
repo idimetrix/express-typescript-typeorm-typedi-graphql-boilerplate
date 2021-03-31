@@ -1,6 +1,6 @@
 import { configure, transports } from 'winston';
 
-export const configureLogger = () => {
+export const configureLogger: () => void = (): void => {
   configure({
     transports: [
       new transports.Console({

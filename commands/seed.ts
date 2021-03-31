@@ -16,16 +16,16 @@ commander
   .parse(process.argv);
 
 // Get cli parameter for a different factory path
-const factoryPath = commander.factories ? commander.factories : 'src/database/factories';
+const factoryPath: string = commander.factories ? commander.factories : 'src/database/factories';
 
 // Get cli parameter for a different seeds path
-const seedsPath = commander.seeds ? commander.seeds : 'src/database/seeds/';
+const seedsPath: string = commander.seeds ? commander.seeds : 'src/database/seeds/';
 
 // Get a list of seeds
-const listOfSeeds = commander.run ? commander.run.map((l) => l.trim()).filter((l) => l.length > 0) : [];
+const listOfSeeds: string[] = commander.run ? commander.run.map((l: string) => l.trim()).filter((l: string) => l.length > 0) : [];
 
 // Search for seeds and factories
-const run = async () => {
+const run = async (): Promise<any> => {
   const log = console.log;
 
   await useSeeding();

@@ -17,6 +17,13 @@ export const env = {
   isProduction: process.env.NODE_ENV === 'production',
   isTest: process.env.NODE_ENV === 'test',
   isDevelopment: process.env.NODE_ENV === 'development',
+  api: {
+    threeCommas: {
+      key: getOsEnv('THREE_COMMAS_KEY'),
+      secret: getOsEnv('THREE_COMMAS_SECRET'),
+      url: getOsEnv('THREE_COMMAS_URL'),
+    },
+  },
   app: {
     name: getOsEnv('APP_NAME'),
     version: (pkg as any).version,

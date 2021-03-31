@@ -14,6 +14,7 @@ import { publicLoader } from './loaders/publicLoader';
 import { swaggerLoader } from './loaders/swaggerLoader';
 import { typeormLoader } from './loaders/typeormLoader';
 import { winstonLoader } from './loaders/winstonLoader';
+import { cronLoader } from './loaders/cronLoader';
 
 /**
  * EXPRESS TYPESCRIPT BOILERPLATE
@@ -31,6 +32,7 @@ bootstrapMicroframework({
    * bootstrap process. All loaders are executed one by one in a sequential order.
    */
   loaders: [
+    cronLoader,
     winstonLoader,
     iocLoader,
     eventDispatchLoader,
@@ -44,4 +46,4 @@ bootstrapMicroframework({
   ],
 })
   .then(() => banner(log))
-  .catch((error) => log.error('Application is crashed: ' + error));
+  .catch((error: Error) => log.error('Application is crashed: ' + error));
